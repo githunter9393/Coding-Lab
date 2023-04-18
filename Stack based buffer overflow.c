@@ -11,14 +11,14 @@ int test_pw()
 }
 
 
-void win()
+void finish()
 {
-    printf("You Win!\n"):
+    printf("program hacked!\n"):
 }
 
 
 int main()
 {
       if(test_pw()) printf("Fail!\n");
-      else win();
+      else finish();
 }
