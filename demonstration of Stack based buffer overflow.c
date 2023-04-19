@@ -10,7 +10,7 @@ int test_pw()
        return 1;
 }
 
-                       \\ once the user accurately planted the address of this line in the instruction pointer, the program will jump to this line
+                       \\ once the user accurately planted the address of this line in the instruction pointer, the program will jump to this line.
 void finish()
 {
     printf("program hacked!\n"):
