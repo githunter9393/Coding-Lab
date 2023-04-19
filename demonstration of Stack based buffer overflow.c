@@ -6,7 +6,7 @@ int test_pw()
        char password[10];
        printf("password address: %p\n", password);
        printf("enter password: \n");
-       gets(password);                      \\ the user will exploit this to inject data in the instruction pointer.
+       gets(password);                      \\ the user will exploit this to inject data into the instruction pointer.
        return 1;
 }
 
