@@ -15,11 +15,11 @@ MOV SCON,#50H    ;reset UART - enable input
 MOV TH1,#0FDH    ;set baud rate to 9600 BPS
 MOV TL1,#0FDH
 
-SETB TR1        ;activate timer1
+SETB TR1         ;activate timer1
 
 RECEIVE:
 
 LCALL RI_CHECK   ; jump to the RI_CHECK. after the function continue to next line
 MOV P1,SBUF      ;  move data from the serial buffer to P1 which controls the LED display 
-SJMP RECEIVE     ; jump to RECEIVE 
+SJMP RECEIVE     ; jump to  RECEIVE 
 END
