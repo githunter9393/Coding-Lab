@@ -6,7 +6,7 @@ RI_CHECK:    ;RI flag checks if the UART received any input
 
 JNB RI,RI_CHECK    ; looping while RI = 0
 CLR RI             ; set RI to '0'
-RET
+RET                ; return to the line following the call to the function
 
 START:
 
