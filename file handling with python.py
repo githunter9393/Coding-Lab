@@ -21,7 +21,7 @@ file2.close()
 F=open("file1.txt","r")
 
 count=0
-
+                   # loop counts the number of lines in file1
 while(True):
     b=F.read(1)
     if(b=='\n'):
