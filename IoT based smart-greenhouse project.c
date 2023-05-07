@@ -12,7 +12,7 @@ void servo(void); // שלא מקבלת ערכים ולא מחזירה ערכים
 
 unsigned int  volt;		// הגדרת משתנה 16 ביט ללא סימן
 unsigned char temp,fb;	// הגדרת משתנים בגודל 8 סיביות ללא סימן
-unsigned char sekonds;	// הגדרת משתנים בגודל 8 סיביות ללא סימן
+unsigned char seconds;	// הגדרת משתנים בגודל 8 סיביות ללא סימן
 unsigned char minutes;	// הגדרת משתנים בגודל 8 סיביות ללא סימן
 unsigned char hour;		// הגדרת משתנים בגודל 8 סיביות ללא סימן
 unsigned char zmanH;	// הגדרת משתנים בגודל 8 סיביות ללא סימן
@@ -211,7 +211,7 @@ void	read_time() 	// פונקציה לקריאת זמן עדכני מהשעון
 	msec(1);				// קריאה לפונקציה לטובת השהייה
 
 	 
-	sekonds=i2c_read(NACK);	// קריאת שניות מהשעון RTC
+	seconds=i2c_read(NACK);	// קריאת שניות מהשעון RTC
     msec(1);				// קריאה לפונקציה לטובת השהייה
 	 	 
     i2c_stop();				// i2c קריאה לפונקציה לטובת סיום מקטע בתקן תקשורת
@@ -219,8 +219,8 @@ void	read_time() 	// פונקציה לקריאת זמן עדכני מהשעון
 	 
 	 
  
-	wr_data_to_lcd((sekonds>>4)+0x30);		//הצגת שניות על המסך: עשרות
-    wr_data_to_lcd((sekonds&0x0F)+0x30);	//הצגת שניות על המסך: אחדות
+	wr_data_to_lcd((seconds>>4)+0x30);		//הצגת שניות על המסך: עשרות
+    wr_data_to_lcd((seconds&0x0F)+0x30);	//הצגת שניות על המסך: אחדות
 	 
 	 
 
